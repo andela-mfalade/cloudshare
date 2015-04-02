@@ -11,6 +11,11 @@
   text-align: center;
 }
 
+.img-error{
+width:220px;
+height:220px;
+}
+
 .lineHeight {
   line-height: 30px;
 }

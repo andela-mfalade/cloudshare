@@ -49,5 +49,11 @@ angular.module('appRoutes', [])
       .when('*', {
         templateUrl: '/views/home.html',
         controller: 'mainCtrl'
-      });
+      })
+
+      .otherwise({
+        redirectTo: function() {
+          window.location = "/views/error.html";
+        }
+    });
   }]);
