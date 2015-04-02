@@ -14,12 +14,10 @@ describe("Sharestream App tests", function () {
       query.sendKeys('Some random resource that is not expected to be found here');
       expect(resourceList.count()).toBe(0);
 
+
       query.clear();
       query.sendKeys('programming');
-      expect(resourceList.count()).toBe(5);
-    });
-    it('should re-route to the appropriate resource page when a particular resource link is clicked', function(){
-
+      expect(resourceList.count()).toBe(7);
     });
   });
 });   

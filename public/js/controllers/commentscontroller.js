@@ -72,6 +72,7 @@ angular.module('commentModule', ['commentservice'])
       $scope.fetchComments = function() {
         commentService.getComments($scope.currentInformation['0']._id ,function(arg) {
           $scope.comments = arg;
+          console.log(arg);
         });        
       };
 

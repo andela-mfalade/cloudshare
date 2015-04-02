@@ -63,10 +63,10 @@
                     <p>Comments</p>
                     <ul class="list-group">
                       <li class="list-group-item panel"></li>
-                      <li class="list-group-item panel" ng-repeat="comment in comments">
+                      <li class="list-group-item panel" ng-repeat="comment in comments | orderBy:'commentedOn': true">
                         <p>@<span ng-bind="comment.commentBy"></span> thinks:</p>
                         <small ng-bind="comment.comment"></small><br>
-                        <h6 class="text-muted time pull-left ">1 minute ago</h6>
+                        <h6 class="text-muted time pull-left" >{{comment.commentedOn | date:"MM/dd/yyyy 'at' h:mma"}}</h6>
                         <p></p>
                       </li>
 
