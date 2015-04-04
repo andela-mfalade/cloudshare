@@ -4,7 +4,7 @@
 
   <div class="col-lg-5">
        <h4>Upload Material</h4>
-      <form class="form-horizontal" role="form">
+      <form class="form-horizontal" name="uploadForm" role="form">
         <div class="radio"> 
           <h5>Select Category</h5> 
             <input id="arts" type="radio" name="category" value="arts" ng-model="category" ng-change="hideNotifications()">  
@@ -49,11 +49,11 @@
             <textarea class="form-control " id="md" ng-model="fileType" ng-focus="hideNotifications()" required></textarea>
           </div>
         </div>
-        <button type="submit" class="btn btn-default" ng-click="$valid && addFile()">Contribute</button>
+        <button type="submit" class="btn btn-default" ng-click="uploadForm.$valid && addFile()">Contribute</button>
       </form>
       <br>
       <p class="text-success" ng-show="uploaded">File upload successful</p>
-      <p class="text-error" ng-show="blankfield">Please ensure you fill out all the fields. Be sure to select a category.</p>
+      <p class="text-error" ng-show="blankfield">Please be sure to select a category..</p>
 
       </div>
 

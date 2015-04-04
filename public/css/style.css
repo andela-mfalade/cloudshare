@@ -446,6 +446,7 @@ input[type=radio]:checked + label.radio:before {
 }
 .post .post-description p {
   font-size: 14px;
+  text-align: justify;
 }
 .post .post-description .stats {
   margin-top: 20px;
